@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./Today.css";
+import Loader from "react-loader-spinner";
 import axios from "axios";
 
 export default function Today(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
-      feelsLike:response.data.main.feels_like,
+      feelsLike: response.data.main.feels_like,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -30,7 +30,8 @@ export default function Today(props) {
                 {weatherData.description}
               </div>
               <span className="temp-high-low-today">
-                <strong>{Math.round(weatherData.high)}</strong>º| {Math.round(weatherData.low)}º
+                <strong>{Math.round(weatherData.high)}</strong>º|{" "}
+                {Math.round(weatherData.low)}º
               </span>
             </h1>
           </div>
@@ -59,6 +60,6 @@ export default function Today(props) {
     let unit = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading...";
+    return <Loader type="TailSpin" color="#f2f2f1" height={100} width={100} />;
   }
 }
