@@ -22,7 +22,7 @@ export default function WeatherApp() {
                 <Search />
               </div>
             </div>
-            <Today />
+            <Today defaultCity="Seville" />
 
             <Forcast />
 
