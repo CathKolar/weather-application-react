@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Today.css";
 export default function () {
   let weatherData = {
     place: "Seville, ES",
@@ -9,7 +9,7 @@ export default function () {
     low: 33,
     temperature: 35,
     humidity: 18,
-    wind: 10
+    wind: 10,
   };
   return (
     <div className="Today">

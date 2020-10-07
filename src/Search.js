@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Search.css";
 import Locate from "./Locate";
 export default function Search() {
   return (

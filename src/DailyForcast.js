@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./DailyForcast.css";
 export default function DailyForcast(props) {
   return (
     <div className="DailyForcast">
