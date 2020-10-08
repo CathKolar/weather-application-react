@@ -1,6 +1,6 @@
 import React from "react";
 import "./WeatherApp.css";
-import LastUpdate from "./LastUpdate";
+
 import Search from "./Search";
 import Today from "./Today";
 import Forcast from "./Forcast";
@@ -15,10 +15,7 @@ export default function WeatherApp() {
         <div className="card">
           <div className="card-body">
             <div className="row">
-              <div className="col-6">
-                <LastUpdate />
-              </div>
-              <div className="col-6">
+              <div>
                 <Search />
               </div>
             </div>

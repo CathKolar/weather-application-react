@@ -41,6 +41,7 @@ export default function Today(props) {
               <span></span>
               <div>{weatherData.city}</div>
             </h2>
+            <h6>Tuesday 13:30</h6>
           </div>
           <div className="col-4 weather-extras">
             <p>
