@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import "./Today.css";
 import Loader from "react-loader-spinner";
 import axios from "axios";
@@ -8,6 +9,7 @@ export default function Today(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
@@ -41,7 +43,7 @@ export default function Today(props) {
               <span></span>
               <div>{weatherData.city}</div>
             </h2>
-            <h6>Tuesday 13:30</h6>
+            <FormattedDate date={weatherData.date} />
           </div>
           <div className="col-4 weather-extras">
             <p>
