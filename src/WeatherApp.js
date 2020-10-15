@@ -1,12 +1,11 @@
 import React from "react";
-import "./WeatherApp.css";
 
-import Search from "./Search";
+
 import Today from "./Today";
 import Forcast from "./Forcast";
-
 import Conversion from "./Conversion";
 import Footer from "./Footer";
+import "./WeatherApp.css";
 
 export default function WeatherApp() {
   return (
@@ -16,9 +15,11 @@ export default function WeatherApp() {
           <div className="card-body">
             <div className="row">
               <div>
-                <Search />
+       
               </div>
             </div>
+          
+
             <Today defaultCity="Seville" />
 
             <Forcast />
