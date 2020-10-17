@@ -13,7 +13,7 @@ export default function Today(props) {
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
-      iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
+       icon: response.data.weather[0].icon,
       high: response.data.main.temp_max,
       low: response.data.main.temp_min,
       feelsLike: response.data.main.feels_like,
@@ -21,7 +21,7 @@ export default function Today(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
-       city: response.data.name,
+      city: response.data.name,
     });
   }
  
@@ -60,7 +60,6 @@ export default function Today(props) {
       </form>
         <Locate />
         <WeatherInfo data={weatherData}/>
-         
       </div>
       </div>
     );

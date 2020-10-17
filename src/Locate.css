@@ -1,7 +1,6 @@
 .Locate .current-location-button {
   background: transparent;
   color: rgb(72, 72, 75);
-
   border-style: none;
   float: center;
   transition: all 300ms ease;
