@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import Locate from "./Locate";
 import Forcast from "./Forcast";
 import Loader from "react-loader-spinner";
 import axios from "axios";
@@ -26,17 +25,34 @@ export default function Weather(props) {
     });
   }
  
-  function handleSubmit(event){
-       event.preventDefault();
-    search(city);
 
-  }
-  function handleCityChange(event){setCity(event.target.value);}
-
-  function search (){ const apiKey = "6feaf6a8d604af91166c8484867322e7";
+   function search (){ 
+    const apiKey = "6feaf6a8d604af91166c8484867322e7";
     let unit = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);}
+
+  function handleSubmit(event){
+       event.preventDefault();
+    search(city);
+   }
+  function handleCityChange(event){setCity(event.target.value);}
+    function currentLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let unit = "metric";
+    let apiKey = "6feaf6a8d604af91166c8484867322e7";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(handleResponse);}
+
+  function getCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(currentLocation);
+  }
+
+  
+   
+
+ 
     
   if (weatherData.ready) {
     return (
@@ -62,7 +78,9 @@ export default function Weather(props) {
           id="search-button"
         />
       </form>
-        <Locate />
+       <div className="Locate">
+      <button className="current-location-button" onClick={getCurrentLocation}> ➢ Current Location </button>
+    </div>
         <WeatherInfo data={weatherData}/>
       </div>
 
