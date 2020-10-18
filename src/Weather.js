@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import Locate from "./Locate";
+import Forcast from "./Forcast";
+import Conversion from "./Conversion";
 import Loader from "react-loader-spinner";
 import axios from "axios";
-import "./Today.css";
+import "./Weather.css";
 
-export default function Today(props) {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -39,7 +41,10 @@ export default function Today(props) {
     
   if (weatherData.ready) {
     return (
-      <div className="Today">
+      <div className="Weather">
+         <div className="weather-app-wrapper">
+        <div className="card">
+          <div className="card-body">
           <div className="search">
       <form id="search-city" onSubmit={handleSubmit}>
         <input
@@ -60,6 +65,13 @@ export default function Today(props) {
       </form>
         <Locate />
         <WeatherInfo data={weatherData}/>
+      </div>
+
+            <Forcast />
+
+            <Conversion />
+              </div>
+      </div>
       </div>
       </div>
     );
