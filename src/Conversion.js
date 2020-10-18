@@ -13,7 +13,7 @@ export default function Conversion() {
           </button>
           <button
             type="button"
-            className="btn btn-outline-info button-fahrenheit diabled"
+            className="btn btn-outline-info button-fahrenheit disabled"
           >
             ºF
           </button>
