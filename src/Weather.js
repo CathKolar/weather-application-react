@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import Forcast from "./Forcast";
+import Forcast from "./Forecast";
 import Loader from "react-loader-spinner";
 import axios from "axios";
 import "./Weather.css";
@@ -22,6 +22,8 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      latitude: response.data.coord.lat,
+      longitude: response.data.coord.lon,
     });
   }
  
@@ -84,7 +86,7 @@ export default function Weather(props) {
         <WeatherInfo data={weatherData}/>
       </div>
 
-            <Forcast />
+            <Forcast lat = {weatherData.latitude} lon = {weatherData.longitude}/>
 
          
               </div>

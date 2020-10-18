@@ -1,6 +1,7 @@
 .Weather .row {
   text-align: center;
   margin: 0px 5px 30px 5px;
+   color: #f2f2f1;
 }
 .Weather h1 {
   line-height: 27px;
