@@ -1,43 +1,13 @@
-.Weather .row {
-  text-align: center;
-  margin: 0px 5px 30px 5px;
-   color: #f2f2f1;
-}
-.Weather h1 {
-  line-height: 27px;
-}
-.Weather h2 {
-  font-size: 50;
-  font-weight: 400;
-  line-height: 35px;
-  margin-top: 62px;
-}
-.Weather p {
-  margin-top: 85px;
-}
-
-.Weather .condition-description {
-  font-size: 28px;
-  font-weight: 400;
-}
-.Weather .condition-description:first-letter {
-  text-transform: capitalize;
-}
-.Weather .temp-high-low-today {
-  font-size: 20px;
-  font-weight: 400;
-}
 .Weather .capsule {
   margin: 0 auto;
-
   min-width: 600px;
   max-width: 700px;
 }
 .Weather .card-body {
   background-image: linear-gradient(to top, #f2f2f1, #4dd1e2, #15a3b8);
   border-radius: 22px;
-  min-width: 600px;
-  max-width: 700px;
+  min-width: 480px;
+
   background-blend-mode: normal, color-burn;
   border: 2px solid #f2f2f1;
   box-shadow: 5px 5px 10px rgba(21, 163, 184, 0.3);

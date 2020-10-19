@@ -1,0 +1,32 @@
+.WeatherInfo .current-conditions {
+  color: #f2f2f1;
+  text-align: center;
+  margin: 0px 5px 30px 5px;
+}
+.WeatherInfo canvas {
+  padding-top: 38px;
+}
+.WeatherInfo h1 {
+  line-height: 27px;
+}
+.WeatherInfo h2 {
+  font-size: 50;
+  font-weight: 400;
+  line-height: 35px;
+  margin-top: 62px;
+}
+.WeatherInfo p {
+  margin-top: 85px;
+}
+
+.WeatherInfo .condition-description {
+  font-size: 28px;
+  font-weight: 400;
+}
+.WeatherInfo .condition-description:first-letter {
+  text-transform: capitalize;
+}
+.WeatherInfo .temp-high-low-today {
+  font-size: 20px;
+  font-weight: 400;
+}

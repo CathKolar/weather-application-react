@@ -1,3 +1,9 @@
+.Forecast  {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
 .Forecast canvas {
   display: block;
   margin: 2px auto;
