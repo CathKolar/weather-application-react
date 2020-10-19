@@ -21,12 +21,12 @@ export default function DailyForecast(props) {
 
     function temperature() {
     let temperature = Math.round(props.data.temp.day);
-    return `${temperature}°C`;
+    return (<div><strong>{temperature}</strong>°C</div>);
 }
 
     return(
             <div className = "dailyForecast col">
-                 {day()}
+                <div className="day">{day()}</div> 
                  <WeatherIcon code = {props.data.weather[0].icon} />
                  <div className="forecast-temperature">{temperature()}</div>
                   

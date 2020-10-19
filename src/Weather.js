@@ -62,6 +62,7 @@ export default function Weather(props) {
          <div className="weather-app-wrapper">
         <div className="card">
           <div className="card-body">
+            <div className="search-and-locate">
           <div className="search">
       <form id="search-city" onSubmit={handleSubmit}>
         <input
@@ -83,6 +84,7 @@ export default function Weather(props) {
        <div className="Locate">
       <button className="current-location-button" onClick={getCurrentLocation}> ➢ Current Location </button>
     </div>
+     </div>
         <WeatherInfo data={weatherData}/>
       </div>
 

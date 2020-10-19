@@ -1,3 +1,7 @@
+.Weather form {
+  padding-left: 16px;
+}
+
 .Weather .capsule {
   margin: 0 auto;
   min-width: 600px;
@@ -21,6 +25,7 @@
   margin: 30px auto;
 }
 .card {
+  max-width: 555px;
   border-radius: 22px;
   border: 0.5px solid rgba(21, 163, 184, 0.125);
 }
@@ -40,6 +45,7 @@
   background-color: #dbfbff;
 }
 .current-location-button {
+  padding-left: 16px;
   background: transparent;
   color: rgb(72, 72, 75);
   border-style: none;
