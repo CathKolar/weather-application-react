@@ -1,7 +1,10 @@
-.Forecast  {
-  color: white;
+.week-ahead {
+  color: #f2f2f1;
+  display: inline-flex;
   text-align: center;
-  font-size: 14px;
+}
+.forecast-temperature {
+  color: #8f9596;
 }
 
 .Forecast canvas {
