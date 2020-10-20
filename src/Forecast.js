@@ -14,8 +14,7 @@ function handleForcastResponse(respose){
 
 }
 
-if(forecast.ready && props.longitude === forecast.lon &&
-    props.latitude === forecast.lat){return(
+if(forecast.ready && props.lon === forecast.element.lon && props.lat === forecast.element.lat){return(
 <div className="container-fluid">
 <div className="card-body week-ahead">
 <div className="row forecast">
