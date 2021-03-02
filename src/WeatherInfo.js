@@ -8,7 +8,7 @@ export default function WeatherInfo (props){
     <div className="WeatherInfo">
       
     <div className="row current-conditions">
-          <div className="col-4">
+          <div className="col-sm-4">
             <WeatherIcon code={props.data.icon} />
             <h1>
               <div className="condition-description text-capitalize">
@@ -20,7 +20,7 @@ export default function WeatherInfo (props){
               </span>
             </h1>
           </div>
-          <div className="col-4">
+          <div className="col-sm-4">
             <h2>
           <WeatherTemperature celsius={props.data.temperature} />
             
@@ -28,7 +28,7 @@ export default function WeatherInfo (props){
             </h2>
             <FormattedDate date={props.data.date} />
           </div>
-          <div className="col-4 weather-extras">
+          <div className="col-sm-4 weather-extras">
             <p>
               Feels like: {Math.round(props.data.feelsLike)}ºC
               <br />
