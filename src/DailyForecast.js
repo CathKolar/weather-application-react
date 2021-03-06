@@ -19,10 +19,11 @@ export default function DailyForecast(props) {
   }
 
   function temperature() {
-    let temperature = Math.round(props.data.temp.day);
+    let minTemp = Math.round(props.data.temp.min);
+    let maxTemp = Math.round(props.data.temp.max);
     return (
       <div>
-        <strong>{temperature}</strong>°C
+        <strong>{minTemp}°|</strong>{maxTemp}°
       </div>
     );
   }
