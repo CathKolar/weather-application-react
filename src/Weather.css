@@ -10,8 +10,6 @@
 .Weather .card-body {
   background-image: linear-gradient(to top, #f2f2f1, #4dd1e2, #15a3b8);
   border-radius: 22px;
-  min-width: 480px;
-
   background-blend-mode: normal, color-burn;
   border: 2px solid #f2f2f1;
   box-shadow: 5px 5px 10px rgba(21, 163, 184, 0.3);
@@ -21,8 +19,8 @@
 }
 
 .Weather .weather-app-wrapper {
-    max-width: 555px;
-    margin: 12px auto;
+  max-width: 555px;
+  margin: 12px auto;
 }
 .card {
   max-width: 555px;

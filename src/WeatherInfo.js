@@ -6,7 +6,7 @@ import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="row row-cols-3 current-conditions">
+      <div className="row row-cols-sm-3 current-conditions">
         <div className="col-sm-4">
           <WeatherIcon code={props.data.icon} />
           <h1>

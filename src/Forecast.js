@@ -18,7 +18,7 @@ export default function Forcast(props) {
     return (
       <div className="container-sm">
         <div className="card-body week-ahead">
-          <div className="row row-cols-3 forecast">
+          <div className="row row-cols-sm forecast">
             <DailyForcast data={forecast.element.daily[1]} />
             <DailyForcast data={forecast.element.daily[2]} />
             <DailyForcast data={forecast.element.daily[3]} />
